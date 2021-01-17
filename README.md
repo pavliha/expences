@@ -1,6 +1,7 @@
 # Getting Started with My Expenses App
 
 This project is created for to do my personal accounting using monobank API
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4041bad0-f9e5-48f4-ae8f-df4845f19aab/deploy-status)](https://app.netlify.com/sites/my-expences-app/deploys)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
