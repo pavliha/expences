@@ -11,3 +11,12 @@ export type Statement = {
   cashbackAmount: number
   balance: number
 }
+
+export type CurrencyInfo = {
+  currencyCodeA: number
+  currencyCodeB: number
+  date: number
+  rateSell: number
+  rateBuy: number
+  rateCross?: number
+}

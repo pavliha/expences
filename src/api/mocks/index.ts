@@ -31,4 +31,4 @@ http.interceptors.response.use(
 )
 
 registerStatements(mock)
-// mock.onAny().passThrough() // Anything that wasn't matched above will be passed through
+mock.onAny().passThrough() // Anything that wasn't matched above will be passed through
