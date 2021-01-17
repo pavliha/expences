@@ -3,7 +3,6 @@ import { SummaryCard } from './SummaryCard'
 import { formatCurrency } from '../utils'
 import { makeStyles } from '@material-ui/core'
 import { getCurrentMonthRemainingDaysCount, getCurrentMonthWeeksCount } from '../utils/datetime'
-import { INCOME, SAVINGS } from '../config'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,21 +19,23 @@ const remainingDaysCount = getCurrentMonthRemainingDaysCount()
 const weeksCount = getCurrentMonthWeeksCount()
 
 interface Props {
+  income: number
+  savings: number
   exchangeRate: number
   totalSpent: number
 }
-export const SummarySection: FC<Props> = ({ exchangeRate, totalSpent }) => {
+export const SummarySection: FC<Props> = ({ exchangeRate, income, savings, totalSpent }) => {
   const classes = useStyles()
 
-  const leftUSD = INCOME - SAVINGS - totalSpent / exchangeRate
-  const leftUAH = INCOME * exchangeRate - SAVINGS * exchangeRate - totalSpent
+  const leftUSD = income / exchangeRate - savings / exchangeRate - totalSpent / exchangeRate
+  const leftUAH = income - savings - totalSpent
 
   return (
     <section className={classes.root}>
       <SummaryCard
         title="Доходы"
-        primary={formatCurrency(INCOME * exchangeRate, 'UAH')}
-        secondary={formatCurrency(INCOME, 'USD')}
+        primary={formatCurrency(income, 'UAH')}
+        secondary={formatCurrency(income / exchangeRate, 'USD')}
       />
       <SummaryCard
         title="Расходы"
@@ -43,8 +44,8 @@ export const SummarySection: FC<Props> = ({ exchangeRate, totalSpent }) => {
       />
       <SummaryCard
         title="Сбережения"
-        primary={formatCurrency(SAVINGS * exchangeRate, 'UAH')}
-        secondary={formatCurrency(SAVINGS, 'USD')}
+        primary={formatCurrency(savings, 'UAH')}
+        secondary={formatCurrency(savings / exchangeRate, 'USD')}
       />
       <SummaryCard
         title="Остаток"

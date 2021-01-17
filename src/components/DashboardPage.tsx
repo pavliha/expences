@@ -4,6 +4,7 @@ import { StatementsList } from './StatementsList'
 import { SummarySection } from './SummarySection'
 import { ExpensesList } from './ExpensesList'
 import { useExchangeRate, useStatements } from '../hooks'
+import { INCOME, SAVINGS } from '../config'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +37,8 @@ export const DashboardPage: FC = () => {
   const statements = useStatements()
   const [tab, setTab] = useState('statements')
 
+  if (!exchangeRate) return null
+
   return (
     <main className={classes.root}>
       <div className={classes.tabsSection}>
@@ -49,10 +52,14 @@ export const DashboardPage: FC = () => {
           <Tab label="Расходы" value="expenses" />
         </Tabs>
         {tab === 'statements' && <StatementsList items={statements} />}
-        {tab === 'expenses' && <ExpensesList className={classes.expensesList} items={statements} />}
+        {tab === 'expenses' && (
+          <ExpensesList income={INCOME * exchangeRate} className={classes.expensesList} items={statements} />
+        )}
       </div>
       <div className={classes.dashboard}>
         <SummarySection
+          income={INCOME * exchangeRate}
+          savings={SAVINGS * exchangeRate}
           exchangeRate={exchangeRate ?? 0}
           totalSpent={statements.reduce((acc, stmt) => acc + stmt.amount, 0)}
         />

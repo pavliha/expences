@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba0f9c7c-ca97-48cb-b512-739c4f848c62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/DashboardPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useStatements.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DashboardPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ExpensesList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ExpensesList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/StatementsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/StatementsList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SummarySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SummarySection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,9 +144,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610923435015</updated>
-      <workItem from="1610923436177" duration="916000" />
+      <workItem from="1610923436177" duration="1425000" />
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix dashboard statements">
+      <created>1610924446312</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610924446312</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,14 +171,15 @@
     <MESSAGE value="add netlify.toml" />
     <MESSAGE value="update netlify.toml" />
     <MESSAGE value="fix too many network requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix too many network requests" />
+    <MESSAGE value="fix dashboard statements" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix dashboard statements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/SummarySection.tsx</url>
-          <line>26</line>
+          <line>25</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

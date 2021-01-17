@@ -13,7 +13,6 @@ import { Statement } from 'src/api'
 import { formatNumber } from 'src/utils'
 import { groupBy, sortBy } from 'lodash'
 import clsx from 'clsx'
-import { INCOME, SAVINGS } from '../config'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -33,11 +32,12 @@ type ExpenseCategory = {
   totalSpent: number
 }
 interface Props {
+  income: number
   className?: string
   items: Statement[]
 }
 
-export const ExpensesList: FC<Props> = ({ className, items }) => {
+export const ExpensesList: FC<Props> = ({ className, income, items }) => {
   const classes = useStyles()
   const categories = Object.entries(groupBy(items, (item: Statement) => item.description)).map(
     ([description, statements]) => ({
@@ -54,10 +54,7 @@ export const ExpensesList: FC<Props> = ({ className, items }) => {
               <ImageIcon />
             </Avatar>
           </ListItemAvatar>
-          <ListItemText
-            primary={description}
-            secondary={`${((Math.abs(totalSpent) * 100) / (INCOME - SAVINGS)).toFixed(2)}%`}
-          />
+          <ListItemText primary={description} secondary={`${((totalSpent * 100) / income).toFixed(2)}%`} />
           <ListItemSecondaryAction>{formatNumber(totalSpent)} грн</ListItemSecondaryAction>
         </ListItem>
       ))}
