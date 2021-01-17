@@ -34,7 +34,7 @@ const App: FC = () => {
         <StatementsList items={statements} />
         <div className={classes.dashboard}>
           <SummarySection
-            exchangeRate={exchangeRate}
+            exchangeRate={exchangeRate ?? 0}
             totalSpent={statements.reduce((acc, stmt) => acc + stmt.amount, 0)}
           />
           <ExpensesList className={classes.expensesList} items={statements} />

@@ -4,9 +4,9 @@ import { CurrencyInfo, Statement } from './types'
 const getUnixFromDate = (date: Date): number => parseInt((date.getTime() / 1000).toFixed(0))
 
 const api = {
-  async currency(): Promise<CurrencyInfo> {
+  async currency(): Promise<CurrencyInfo | undefined> {
     const currencies = await http.get<unknown, CurrencyInfo[]>('/bank/currency')
-    return currencies.find((item) => item.currencyCodeB === 980)
+    return currencies?.find((item) => item.currencyCodeB === 980)
   },
   statements(): Promise<Statement[]> {
     const currentDate = new Date()
