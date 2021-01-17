@@ -1,6 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 import { StatementsList } from './components'
 import api, { Statement } from './api'
+import { CssBaseline } from '@material-ui/core'
 
 const App: FC = () => {
   const [statements, setStatements] = useState<Statement[]>([])
@@ -10,9 +11,12 @@ const App: FC = () => {
   }, [])
 
   return (
-    <main>
-      <StatementsList items={statements} />
-    </main>
+    <>
+      <CssBaseline />
+      <main>
+        <StatementsList items={statements} />
+      </main>
+    </>
   )
 }
 
