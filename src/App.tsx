@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FC, useEffect, useState } from 'react'
+import { StatementsList } from './components'
+import api, { Statement } from './api'
 
-function App() {
+const App: FC = () => {
+  const [statements, setStatements] = useState<Statement[]>([])
+
+  useEffect(() => {
+    api.statements().then(setStatements)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <StatementsList items={statements} />
+    </main>
+  )
 }
 
-export default App;
+export default App
