@@ -6,7 +6,8 @@ import {
   ListItemAvatar,
   ListItemText,
   makeStyles,
-  ListItemSecondaryAction
+  ListItemSecondaryAction,
+  Typography
 } from '@material-ui/core'
 import ImageIcon from '@material-ui/icons/Image'
 import { Statement } from 'src/api'
@@ -55,7 +56,9 @@ export const ExpensesList: FC<Props> = ({ className, income, items }) => {
             </Avatar>
           </ListItemAvatar>
           <ListItemText primary={description} secondary={`${((totalSpent * 100) / income).toFixed(2)}%`} />
-          <ListItemSecondaryAction>{formatNumber(totalSpent)} грн</ListItemSecondaryAction>
+          <ListItemSecondaryAction>
+            <Typography variant="subtitle1">{formatNumber(totalSpent)} грн</Typography>
+          </ListItemSecondaryAction>
         </ListItem>
       ))}
     </List>

@@ -53,7 +53,11 @@ export const StatementsList: FC<Props> = ({ items }) => {
                 </Avatar>
               </ListItemAvatar>
               <ListItemText primary={item.description} secondary={`баланс: ${formatNumber(item.balance)} UAH`} />
-              <ListItemSecondaryAction>{formatNumber(item.amount)} грн</ListItemSecondaryAction>
+              <ListItemSecondaryAction>
+                <Typography color={item.amount > 0 ? 'primary' : 'textPrimary'} variant="subtitle1">
+                  {formatNumber(item.amount)} грн
+                </Typography>
+              </ListItemSecondaryAction>
             </ListItem>
           ))}
         </div>
