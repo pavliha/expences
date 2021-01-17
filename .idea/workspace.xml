@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba0f9c7c-ca97-48cb-b512-739c4f848c62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/SummarySection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ExpensesList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/datetime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SummarySection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SummarySection.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610912881216</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactor summary">
+      <created>1610913262550</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610913262550</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -74,7 +88,8 @@
     <MESSAGE value="remove .env" />
     <MESSAGE value="add statements list" />
     <MESSAGE value="add summary cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="add summary cards" />
+    <MESSAGE value="refactor summary" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor summary" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
