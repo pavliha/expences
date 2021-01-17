@@ -6,7 +6,6 @@ import {
   ListItemAvatar,
   ListItemText,
   makeStyles,
-  Theme,
   ListItemSecondaryAction
 } from '@material-ui/core'
 import ImageIcon from '@material-ui/icons/Image'
@@ -16,12 +15,9 @@ import { groupBy, sortBy } from 'lodash'
 import clsx from 'clsx'
 import { INCOME, SAVINGS } from '../config'
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    maxHeight: 'calc(100vh - 170px)',
-    maxWidth: 500,
-    overflow: 'scroll',
-    backgroundColor: theme.palette.background.paper
+    width: '100%'
   },
   header: {
     display: 'flex',

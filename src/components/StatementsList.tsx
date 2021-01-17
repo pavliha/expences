@@ -6,7 +6,6 @@ import {
   ListItemAvatar,
   ListItemText,
   makeStyles,
-  Theme,
   ListItemSecondaryAction,
   Typography
 } from '@material-ui/core'
@@ -16,12 +15,9 @@ import { formatNumber } from 'src/utils'
 import { groupBy } from 'lodash'
 import moment from 'moment'
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    height: '100vh',
-    overflow: 'auto',
-    maxWidth: 400,
-    backgroundColor: theme.palette.background.paper
+    width: '100%'
   },
   header: {
     display: 'flex',

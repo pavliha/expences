@@ -8,8 +8,11 @@ import { INCOME, SAVINGS } from '../config'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'grid',
-    gridAutoFlow: 'column',
-    gridGap: theme.spacing(2)
+    gridTemplateColumns: '1fr 1fr',
+    gridGap: theme.spacing(2),
+    [theme.breakpoints.up('md')]: {
+      gridAutoFlow: 'column'
+    }
   }
 }))
 
