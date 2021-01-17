@@ -2,6 +2,9 @@ import React from 'react'
 import { render } from 'react-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import 'moment/locale/ru'
+import moment from 'moment'
+moment.locale('ru')
 
 if (process.env.REACT_APP_MOCK_EVERYTHING === 'true') {
   import('./mocks').then(() => render(<App />, document.getElementById('root')))

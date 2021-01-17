@@ -1,6 +1,6 @@
 export type Statement = {
   id: string
-  time: string
+  time: number
   description: string
   mcc: number
   hold: boolean
